@@ -11,6 +11,8 @@ const session = require("express-session");
 
 const app = express();
 
+app.set("view engine", "ejs");
+
 app.use(
   session({
     secret: process.env.SECRET,
@@ -73,7 +75,7 @@ app.post("/login", async function(req, res) {
         }
       );
       req.session.token = token;
-      res.sendFile(path.join(__dirname + "/Website/dashboard.html"));
+      res.redirect("/");
     } else {
       return res.sendFile(path.join(__dirname + "/Website/login.html"));
     }
@@ -120,9 +122,19 @@ app.post("/register", async function(req, res) {
   }
 });
 
-//Homepage
+//Dashboard
 app.get("/", auth, function(req, res) {
-  res.sendFile(path.join(__dirname + "/Website/dashboard.html"));
+  res.render("Website/options");
+});
+
+//Dashboard
+app.get("/dashboard", auth, function(req, res) {
+  res.render("Website/dashboard", { stationnum: req.query.number });
+});
+
+//Contact
+app.get("/contact", auth, function(req, res) {
+  res.sendFile(path.join(__dirname + "/Website/contact.php"));
 });
 
 app.listen(6600, function(err) {
