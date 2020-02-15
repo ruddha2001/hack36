@@ -42,37 +42,31 @@
     </div>
   </nav>
   <!-- Navigation Ends -->
-  <div class="container-fluid wid-ful"><br>
-    <h1 class="display-4">Nursing Dock <%=stationnum%></h1><br>
-    <!--Patient Data-->
-    <table class="table">
-        <thead class="thead-dark table-hover">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Vitals</th>
-            <th scope="col">Data</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Patient 1</td>
-            <td>60</td>
-            <td>Placeholder</td>
-            <td><button type="button" class="btn btn-lg btn-danger" data-toggle="first-popover" title="Patient Details" data-content="Placeholder, placeholder, placeholder." style="border-radius: 90px;">+</button></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Patient 2</td>
-            <td>62</td>
-            <td>Placeholder</td>
-            <td><button type="button" class="btn btn-lg btn-danger" data-toggle="second-popover" title="Patient Details" data-content="Placeholder, placeholder, placeholder." style="border-radius: 90px;">+</button></td>
-          </tr>
-        </tbody>
-      </table>
-      <!--Patient Data Ends-->
+
+  <div class="row col-12 col-lg-10 offset-lg-1" style="margin-top: 100px;">
+    <div class="card-group" style="width: 100%;">
+      <div class="card" style="margin: 10px;border: 2px solid black;border-radius: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Nursing Dock 1</h5>
+          <p class="card-text">Isolation Ward, Ground Floor</p>
+          <p class="card-text"><small class="text-muted">Currently Active</small></p>
+        </div>
+      </div>
+      <div class="card" style="margin: 10px;border: 2px solid black;">
+        <div class="card-body">
+          <h5 class="card-title">Nursing Dock 2</h5>
+          <p class="card-text">ECU Block 1, Third Floor</p>
+          <p class="card-text"><small class="text-muted">Disabled</small></p>
+        </div>
+      </div>
+      <div class="card" style="margin: 10px;border: 2px solid black;">
+        <div class="card-body">
+          <h5 class="card-title">Nursing Dock 3</h5>
+          <p class="card-text">ICU Block 1/A, Second Floor</p>
+          <p class="card-text"><small class="text-muted">Disabled</small></p>
+        </div>
+      </div>
+    </div>
   </div>
 <!--Footer-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; bottom: 0 !important; left: 0 !important;">

@@ -98,7 +98,9 @@ app.post("/register", async function(req, res) {
       let response = await collection.find({ email: email }).toArray();
       if (response.length != 0) {
         console.log("Existing Email");
-        return res.sendStatus(409);
+        return res
+          .status(299)
+          .sendFile(path.join(__dirname + "/Website/register.html"));
       } else {
         try {
           let result = await collection.insertOne({
@@ -122,19 +124,32 @@ app.post("/register", async function(req, res) {
   }
 });
 
-//Dashboard
+//Contact
+app.get("/register", function(req, res) {
+  res.sendFile(path.join(__dirname + "/Website/register.html"));
+});
+
+//Options
 app.get("/", auth, function(req, res) {
   res.render("Website/options");
 });
 
 //Dashboard
-app.get("/dashboard", auth, function(req, res) {
-  res.render("Website/dashboard", { stationnum: req.query.number });
+app.get("/dashboard", auth, async function(req, res) {
+  let dock = req.query.number;
+  let collection = client.db("eagleAssist").collection("users");
+  try {
+    let result = await collection.find({});
+  } catch (err) {
+    console.log(err);
+    return res.sendStatus(500);
+  }
+  res.render("Website/dashboard", { stationnum: dock });
 });
 
 //Contact
 app.get("/contact", auth, function(req, res) {
-  res.sendFile(path.join(__dirname + "/Website/contact.php"));
+  res.sendFile(path.join(__dirname + "/Website/contact.html"));
 });
 
 app.listen(6600, function(err) {

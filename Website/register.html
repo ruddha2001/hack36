@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eagle Assist Login</title>
+    <title>Eagle Assist Register</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -41,15 +41,15 @@
               alt="Logo"
             />
           </div>
-          <div class="col-lg-6" style="margin-top: 100px;">
+          <div class="col-lg-6" style="margin-top: 40px;">
             <div class="card col-lg-8 d-block mx-auto">
               <br />
               <h1 class="display-4" style="text-align: center;">Register</h1>
               <br />
               <div class="card-body px-lg-5 pt-0">
                 <!-- Form -->
-                <form action="http://localhost:6600/login" method="POST">
-                    <div class="form-group">
+                <form action="http://localhost:6600/register" method="POST">
+                  <div class="form-group">
                     <label
                       for="exampleInputEmail1"
                       style="text-align: center;"
@@ -57,7 +57,7 @@
                       >Name</label
                     >
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
                       id="email"
                       aria-describedby="emailHelp"
@@ -69,10 +69,10 @@
                       class="form-text text-muted"
                       style="text-align: center;"
                       class="d-block mx-auto"
-                      >Enter your username</small
+                      >Enter your full name</small
                     >
-                    </div>
-                    <div class="form-group">
+                  </div>
+                  <div class="form-group">
                     <label
                       for="exampleInputEmail1"
                       style="text-align: center;"
@@ -123,6 +123,11 @@
                   >
                     Register
                   </button>
+                  <div>
+                    <p style="text-align: center;">
+                      Have an account? <a href="/">Log in</a>
+                    </p>
+                  </div>
                 </form>
                 <!-- Form -->
                 <br />
