@@ -22,6 +22,7 @@ void setup()//Init of the mesh network and init of the TaskScheduler
   Serial.begin(115200);
   mesh.setDebugMsgTypes( ERROR | STARTUP | CONNECTION );
   mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT, WIFI_AP_STA, 6); //Mesh Network Credentials
+  mesh.setContainsRoot(true); // This node and all other nodes should ideally know the mesh contains a root, so we call this on all nodes
   userScheduler.addTask( taskSendMessage );
   taskSendMessage.enable();
 }
