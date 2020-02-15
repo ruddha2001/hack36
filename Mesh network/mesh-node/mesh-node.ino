@@ -10,18 +10,18 @@ Task taskSendMessage( 500, TASK_FOREVER, &sendMessage );//The task of sending a 
 
 void sendMessage()//Specially formatted message containing all vitals information
 {
-  String msg = "Hello from node 1";
+  uint32_t nodeId = mesh.getNodeId();
+  String msg = "Hello from node " + String(nodeId);
   mesh.sendBroadcast( msg );
   Serial.println("MESSAGE SENT: " + msg);
   taskSendMessage.setInterval(500);
-
 }
 
 void setup()//Init of the mesh network and init of the TaskScheduler
 {
   Serial.begin(115200);
   mesh.setDebugMsgTypes( ERROR | STARTUP | CONNECTION );
-  mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT); //Mesh Network Credentials
+  mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT, WIFI_AP_STA, 6); //Mesh Network Credentials
   userScheduler.addTask( taskSendMessage );
   taskSendMessage.enable();
 }
