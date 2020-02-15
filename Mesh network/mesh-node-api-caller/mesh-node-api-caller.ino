@@ -19,6 +19,12 @@ void loop() {
   {
     String str = mySerial.readStringUntil('\n');
     Serial.println(str);
+    http.begin("http://192.168.225.46:6600/incoming");  //Specifying request destination
+    http.addHeader("Content-Type", "text/plain");  //Specifying content-type header
+    int httpCode = http.POST(str);
+    String httpStatus = http.getString();
+    Serial.printf("%d : %s\n",httpCode, httpStatus.c_str());
+    http.end();
   }
 }
 
