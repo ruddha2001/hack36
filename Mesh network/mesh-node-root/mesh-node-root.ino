@@ -6,7 +6,6 @@
 void receivedCallback( uint32_t from, String &msg );//'from' stores the chipID and 'msg' the message recieved
 
 painlessMesh  mesh; //Declare mesh library objects
-uint8_t server_ip[4] = {192, 168, 225, 46}; //Server IP
 SoftwareSerial mySerial(4, 5); // RX, TX // SoftWare Serial Config
 
 void setup() {
@@ -26,8 +25,8 @@ void loop() {
 }
 
 void receivedCallback( uint32_t from, String &msg )//On receiving of a signal, conduct the following tasks...
-{
-  String payload = "echoFromNode: Recieved from " + String(from) + " msg= " + String(msg);
+{  
+  String payload = "RECV: FROM= " + String(from) + " MSG= " + String(msg);
   Serial.println(payload);
-  mySerial.println(payload);
+  mySerial.println(msg);
 }

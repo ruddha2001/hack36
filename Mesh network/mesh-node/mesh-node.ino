@@ -6,15 +6,16 @@ painlessMesh  mesh; //Defining object of the painlessMesh class
 Scheduler userScheduler;//We cannot use delays, thus we use the TaskScheduler Library to delay and set tasks
 void sendMessage() ;//Init of message sending function
 
-Task taskSendMessage( 500, TASK_FOREVER, &sendMessage );//The task of sending a message every minute
+Task taskSendMessage( 1000, TASK_FOREVER, &sendMessage );//The task of sending a message every minute
 
 void sendMessage()//Specially formatted message containing all vitals information
 {
   uint32_t nodeId = mesh.getNodeId();
-  String msg = "Hello from node " + String(nodeId);
+  int val = map(analogRead(A0),0 , 1023, 50, 135);
+  String msg = "{\"id\":" + String(nodeId) + ",\"value\":" + String(val) + "}";
   mesh.sendBroadcast( msg );
   Serial.println("MESSAGE SENT: " + msg);
-  taskSendMessage.setInterval(500);
+  taskSendMessage.setInterval(1000);
 }
 
 void setup()//Init of the mesh network and init of the TaskScheduler
