@@ -28,114 +28,83 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Eagle Assist</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Sub Stations
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">#1</a>
-              <a class="dropdown-item" href="#">#2</a>
-              <a class="dropdown-item" href="#">#3</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Navigation Ends -->
+  <body style="position: relative;">
     <div class="container-fluid wid-ful">
       <!-- Login -->
       <div class="container-fuid" style="display: block;">
         <div class="row">
-          <div class="col-lg-6" style="margin-top: 100px;">
-            <center>
-              <img src="Eagle Assist.png" width="70%" alt="Logo" />
-            </center>
+          <div class="col-lg-6" style="margin-top: 60px;">
+            <img
+              src="Eagle Assist.png"
+              class="d-block mx-auto"
+              width="70%"
+              alt="Logo"
+            />
           </div>
           <div class="col-lg-6" style="margin-top: 100px;">
-            <center>
-              <div class="card col-lg-8">
+            <div class="card col-lg-8 d-block mx-auto">
+              <br />
+              <h1 class="display-4" style="text-align: center;">Sign In</h1>
+              <br /><br />
+              <div class="card-body px-lg-5 pt-0">
+                <!-- Form -->
+                <form action="http://localhost:6600/login" method="POST">
+                  <div class="form-group">
+                    <label
+                      for="exampleInputEmail1"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Username</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Username"
+                      name="email"
+                    />
+                    <small
+                      id="emailHelp"
+                      class="form-text text-muted"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Enter your authorised email address</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label
+                      for="exampleInputPassword1"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Enter Password"
+                      name="password"
+                    />
+                    <small
+                      id="passwordHelp"
+                      class="form-text text-muted"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Enter your password</small
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-cust1 d-block mx-auto"
+                  >
+                    Log In
+                  </button>
+                </form>
+                <!-- Form -->
                 <br />
-                <h1 class="display-4">Sign In</h1>
-                <br /><br />
-                <div class="card-body px-lg-5 pt-0">
-                  <!-- Form -->
-                  <form action="http://localhost:6600/login" method="POST">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Username</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter Username"
-                        name="email"
-                      />
-                      <small id="emailHelp" class="form-text text-muted"
-                        >Authorized Access Only</small
-                      >
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="password"
-                        placeholder="Enter Password"
-                        name="password"
-                      />
-                    </div>
-                    <div class="form-group form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="exampleCheck1"
-                      />
-                      <label class="form-check-label" for="exampleCheck1"
-                        >Keep Me Logged In</label
-                      >
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-cust1">
-                      Submit
-                    </button>
-                  </form>
-                  <!-- Form -->
-                  <br />
-                </div>
               </div>
-            </center>
+            </div>
           </div>
         </div>
       </div>
@@ -143,10 +112,12 @@
     <!--Footer-->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark"
-      style="bottom: 0 !important; left: 0 !important;"
+      style="position: fixed; bottom: 0; left: 0; width: 100%;"
     >
-      <div class="container">
-        <h5 class="text-white">Developed by Team MegaHertz</h5>
+      <div class="container d-block mx-auto">
+        <h5 class="text-white" style="text-align: center;">
+          Developed by Team MegaHertz
+        </h5>
       </div>
     </nav>
     <!--Footer Ends-->
