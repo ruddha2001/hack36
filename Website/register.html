@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eagle Assist Login</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="position: relative;">
+    <div class="container-fluid wid-ful">
+      <!-- Login -->
+      <div class="container-fuid" style="display: block;">
+        <div class="row">
+          <div class="col-lg-6" style="margin-top: 60px;">
+            <img
+              src="Eagle Assist.png"
+              class="d-block mx-auto"
+              width="70%"
+              alt="Logo"
+            />
+          </div>
+          <div class="col-lg-6" style="margin-top: 100px;">
+            <div class="card col-lg-8 d-block mx-auto">
+              <br />
+              <h1 class="display-4" style="text-align: center;">Register</h1>
+              <br />
+              <div class="card-body px-lg-5 pt-0">
+                <!-- Form -->
+                <form action="http://localhost:6600/login" method="POST">
+                    <div class="form-group">
+                    <label
+                      for="exampleInputEmail1"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Name</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Name"
+                      name="name"
+                    />
+                    <small
+                      id="emailHelp"
+                      class="form-text text-muted"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Enter your username</small
+                    >
+                    </div>
+                    <div class="form-group">
+                    <label
+                      for="exampleInputEmail1"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Username"
+                      name="email"
+                    />
+                    <small
+                      id="emailHelp"
+                      class="form-text text-muted"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Enter your authorised email address</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label
+                      for="exampleInputPassword1"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Enter Password"
+                      name="password"
+                    />
+                    <small
+                      id="passwordHelp"
+                      class="form-text text-muted"
+                      style="text-align: center;"
+                      class="d-block mx-auto"
+                      >Enter your password</small
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-cust1 d-block mx-auto"
+                  >
+                    Register
+                  </button>
+                </form>
+                <!-- Form -->
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      style="position: fixed; bottom: 0; left: 0; width: 100%;"
+    >
+      <div class="container d-block mx-auto">
+        <h5 class="text-white" style="text-align: center;">
+          Developed by Team MegaHertz
+        </h5>
+      </div>
+    </nav>
+    <!--Footer Ends-->
+  </body>
+</html>
