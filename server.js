@@ -47,8 +47,9 @@ let auth = async function(req, res, next) {
   }
 };
 
+//Incoming API
 app.post("/incoming", async function(req, res) {
-  console.log(req.body.value);
+  console.log(req.body);
   res.sendStatus(200);
 });
 
@@ -137,14 +138,16 @@ app.get("/", auth, function(req, res) {
 //Dashboard
 app.get("/dashboard", auth, async function(req, res) {
   let dock = req.query.number;
-  let collection = client.db("eagleAssist").collection("users");
+  let collection = client.db("eagleAssist").collection("patientData");
   try {
-    let result = await collection.find({});
+    let result = await collection
+      .find({ $or: [{ bednum: 1 }, { bednum: 2 }] })
+      .toArray();
+    res.render("Website/dashboard", { data: result });
   } catch (err) {
     console.log(err);
     return res.sendStatus(500);
   }
-  res.render("Website/dashboard", { stationnum: dock });
 });
 
 //Contact
