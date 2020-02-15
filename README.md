@@ -1,5 +1,12 @@
 # Eagle Assist
 
+## Team Name: Team MegaHertz
+
+## Team Members
+* [Aniruddha Chatterjee](https://github.com/ruddha2001)
+* [Aaishika S Bhattacharya](https://github.com/aaishikasb)
+* [Gita Alekhya Paul](https://github.com/gitaalekhyapaul)
+
 ## Domain
 Healthcare
 
