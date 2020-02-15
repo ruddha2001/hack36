@@ -25,8 +25,6 @@ We know that in all hospitals, we have several kinds of beds, like some for gene
 
 ## Tasks Accomplished
 - Raised proposal for a detection and sorting system.
-- Placed a NodeMCU in the support and monitoring system which continuously monitors the patient’s vitals and scores it in some form.
-- Upon receiving a trigger, for example say on the account of an increased pulse rate, the system is able to send commands to the server, which in turn sends alerts to a nursing station nearby.
-- The scoring system allows one to categorize patient beds and hospital sectors effortlessly.
-- Efficiently predicts which Nursing Station is most busy or requires attention.
-- Aforementioned Tasks accomplished wirelessly without changing the infrastructure of the hospital.
+- Set up a NodeMCU transmitter communication in WiFi Mesh.
+- Created secure APIs for user credentials (Login and Registration).
+- Frontend Dashboard Developed.
