@@ -32,6 +32,7 @@ client.connect(function(err) {
 });
 
 app.use(cors());
+app.use(bodyParser.text());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

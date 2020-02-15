@@ -50,8 +50,9 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Vitals</th>
+            <th scope="col">Pulse</th>
+            <th scope="col">SP O2</th>
+            <th scope="col">Blood Pressure</th>
             <th scope="col">Data</th>
           </tr>
         </thead>
@@ -64,6 +65,7 @@
             <td><button type="button" class="btn btn-lg btn-danger" data-toggle="first-popover" title="Patient Details" data-content="Placeholder, placeholder, placeholder." style="border-radius: 90px;">+</button></td>
           </tr>
           <tr>
+            <% for (var i =0; i <data.length;  i++ ) { %>
             <th scope="row">2</th>
             <td>Patient 2</td>
             <td>62</td>
