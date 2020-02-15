@@ -16,7 +16,7 @@ app.set("view engine", "ejs");
 app.use(
   session({
     secret: process.env.SECRET,
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 300000 },
     resave: false,
     saveUninitialized: false
   })
@@ -144,7 +144,7 @@ app.get("/dashboard", auth, async function(req, res) {
     let result = await collection
       .find({ $or: [{ bednum: 1 }, { bednum: 2 }] })
       .toArray();
-    res.render("Website/dashboard", { data: result });
+    res.render("Website/dashboard", { data: result, stationnum: dock });
   } catch (err) {
     console.log(err);
     return res.sendStatus(500);
