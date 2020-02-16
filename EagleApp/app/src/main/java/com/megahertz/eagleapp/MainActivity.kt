@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        webView.loadUrl("https://www.google.com/")
+        webView.loadUrl("http://192.168.44.158:6600/")
 
     }
 }
