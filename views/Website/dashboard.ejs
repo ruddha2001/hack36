@@ -15,6 +15,27 @@
     text-align: center;
   }
 </style>
+<script>
+  async function sendMail(num){
+    const response = await fetch("http://localhost:6600/mailer", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    referrerPolicy: 'no-referrer', // no-referrer, *client
+    body: {number:num}
+  });
+
+  let res = await response.json();
+
+  if (res.status==true){
+    alert("Mail sent. Please check your inbox for the details");
+  }
+  else{
+    alert("There was a problem sending the mail. Please try again or contact the system admin.");
+  }
+  }
+</script>
     
 </head>
 <body style="position: relative;">
@@ -58,7 +79,8 @@
             <th scope="col">Pulse</th>
             <th scope="col">SP O2</th>
             <th scope="col">Blood Pressure</th>
-            <th scope="col">Data</th>
+            <th scope="col">Status</th>
+            <th scope="col">Report</th>
           </tr>
         </thead>
         <tbody>
@@ -69,7 +91,8 @@
             <td><%=data[i].pulse%></td>
             <td><%=data[i].spo2%></td>
             <td><%=data[i].bp1%>/<%=data[i].bp2%></td>
-            <td><button type="button" class="btn btn-lg btn-danger" data-toggle="second-popover" title="Patient Details" data-content="Placeholder, placeholder, placeholder." style="border-radius: 90px;">+</button></td>
+            <td><%=value[i]%></td>
+            <td><button type="button" onclick="sendMail(1)" class="btn btn-lg btn-danger" data-toggle="second-popover" title="Patient Details" data-content="Placeholder, placeholder, placeholder." style="border-radius: 90px;">+</button></td>
           </tr>
           <%}%>
         </tbody>
@@ -85,6 +108,10 @@
 <!--Footer Ends-->
 </div>
 <script>
+$(document).ready(setTimeout(reload,5000));
+function reload() {
+  window.location.reload();
+}
 $(function () {
   $('.first-popover').popover({
     container: 'body'

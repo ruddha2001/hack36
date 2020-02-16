@@ -16,9 +16,11 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "express-rate-limit": "^5.1.1",
     "express-session": "^1.17.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.2",
+    "nodemailer": "^6.4.2",
     "path": "^0.12.7"
   }
 }
