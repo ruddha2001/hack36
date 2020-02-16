@@ -35,3 +35,18 @@ We know that in all hospitals, we have several kinds of beds, like some for gene
 - Set up a NodeMCU transmitter communication in WiFi Mesh.
 - Created secure APIs for user credentials (Login and Registration).
 - Frontend Dashboard Developed.
+- App developed in Kotlin.
+
+## How to Run It?
+- Git clone the repository to your preferred location
+- Install Node.js (if not already present)
+- Assemble and switch on the hardware connections
+- Run `npm start` 
+- Open browser to http://localhost:6600
+
+## Glimpses
+![alt text](https://aniruddha.net/assets/s1.png "Screenshot 1")
+![alt text](https://aniruddha.net/assets/s2.png "Screenshot 2")
+![alt text](https://aniruddha.net/assets/s3.png "Screenshot 3")
+![alt text](https://aniruddha.net/assets/s4.jpeg "Screenshot 4")
+![alt text](https://aniruddha.net/assets/s5.jpeg "Screenshot 5")
